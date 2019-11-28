@@ -1,0 +1,100 @@
+@import 'https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css';
+@import 'http://fonts.googleapis.com/css?family=Roboto:300,400,700';
+body {
+  background: #23253D;
+  color: #fff;
+  font-family: 'Roboto',sans-serif; }
+
+* {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box; }
+
+.container {
+  max-width: 1336px;
+  width: 100%;
+  margin: auto;
+  padding: 0 20px;
+  height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center; }
+
+.body-wrap {
+  width: 100%; }
+
+header {
+  max-width: 300px;
+  margin: auto; }
+  header h1 {
+    margin: 0;
+    font-size: 45px;
+    line-height: 0px;
+    font-weight: 500; }
+    header h1 span {
+      color: red; }
+
+form {
+  max-width: 600px;
+  width: 100%;
+  margin: auto;
+  margin-top: 60px; }
+  form fieldset {
+    border: none;
+    position: relative;
+    padding: 0px;
+    margin: 0px;
+    outline: none;
+    border: none;
+    -webkit-box-shadow: none;
+    box-shadow: none; }
+    form fieldset input:focus {
+      outline: none;
+      border: none;
+      -webkit-box-shadow: none;
+      box-shadow: none;
+      outline-offset: 0px; }
+    form fieldset #result {
+      display: block;
+      padding: 20px;
+      text-align: center;
+      color: #fff;
+      border-radius: 0 0 10px 10px;
+      background: #1e1d32;
+      text-shadow: 1px 1px 1px #000; }
+    form fieldset input[type="text"] {
+      width: 100%;
+      padding: 20px;
+      padding-right: 125px; }
+    form fieldset input[type="submit"] {
+      background: #108d7d;
+      border: none;
+      color: white;
+      position: absolute;
+      top: 0;
+      right: 0;
+      text-transform: uppercase;
+      font-size: 14px;
+      line-height: 14px;
+      height: 100%;
+      padding: 20px;
+      cursor: pointer;
+      -webkit-transition: 0.6s all;
+      -o-transition: 0.6s all;
+      transition: 0.6s all; }
+      form fieldset input[type="submit"]:hover {
+        background: #15bba6; }
+
+.hide-result {
+  opacity: 0; }
+
+.display-result {
+  opacity: 1;
+  -webkit-transition: 0.3s all;
+  -o-transition: 0.3s all;
+  transition: 0.3s all; }
