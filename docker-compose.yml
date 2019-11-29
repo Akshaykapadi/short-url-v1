@@ -1,0 +1,29 @@
+version: "2"
+services:
+    client:
+        image: webapp-client
+        restart: always
+        ports:
+            - "3000:3000"
+        volumes:
+            - ./client:/client
+            - /client/node_modules
+        links:
+            - backened
+    backened:
+        image: webapp-backened
+        restart: always
+        ports:
+            - "5000:5000"
+        volumes:
+            - ./backened:/backened
+            - /backened/node_modules
+        depends_on:
+            - mongodb
+    mongodb:
+        image: mongo
+        container_name: mongodb
+        volumes:
+            - ./data-node:/data/db
+        ports:
+            - 27017:27017
