@@ -3,10 +3,13 @@ const express = require('express');
 const mongoose = require('mongoose');
 const bodyParser = require('body-parser');
 const cors = require('cors');
+const path = require('path');
 
 
 // init
 const app = express();
+
+app.use(express.static(path.join(__dirname,"client/build"))) 
 
 // Body parser middleware
 app.use(bodyParser.urlencoded({ extended: false }));
@@ -42,8 +45,8 @@ app.get('/:hash',(req,res) => {
 })
 
 // path
-app.get('/',(req, res)=>{
-    res.send('Hello ok');
+app.get('*',(req, res)=>{
+    res.sendFile(path.join(__dirname + "/client/build/index.html")) 
 });
 
 // Port
