@@ -58,7 +58,7 @@ async submit() {
       if(!validURL){
         alert('Please ensure this url is correct and includes the http(s) protocol.');
       }else{
-        // if(auth0Client.isAuthenticated()){
+        if(auth0Client.isAuthenticated()){
           axios.post('/api/shorten', {
           url:this.state.url
         }, {
@@ -66,13 +66,13 @@ async submit() {
         })
         .then(res => {
                   this.setState({
-                  link: `/${res.data.hash}`
+                  link: `https://shoturl.herokuapp.com/${res.data.hash}`
                 })
               })
               .catch(err => console.log(err));
-        // }else{
-        //   alert('Please Login.');
-        // }
+        }else{
+          alert('Please Login.');
+        }
         
       }
  

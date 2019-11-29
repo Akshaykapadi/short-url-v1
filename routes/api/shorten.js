@@ -30,7 +30,7 @@ router.use((req, res, next) => {
     }),
   
     // Validate the audience and the issuer.
-    audience: 'R39nihdl4ltxuc3Mz0DSvB4Vj0xrgOl5',
+    audience: 'zHkAepJB3eh2v67LKdLlpT5cpJXGbtlB',
     issuer: `https://dev-82j78ewk.auth0.com/`,
     algorithms: ['RS256']
   });
@@ -38,7 +38,7 @@ router.use((req, res, next) => {
 // @route POST api/shorten
 // @desc POST a url to shorten
 // @access Public
-router.post('/',(req,res)=>{
+router.post('/',checkJwt,(req,res)=>{
     // Did you get the req?
     console.log(req);
     if(req.body.url){
