@@ -4,6 +4,9 @@ const mongoose = require('mongoose');
 const bodyParser = require('body-parser');
 const cors = require('cors');
 const path = require('path');
+const https = require('http');
+
+
 
 
 // init
@@ -58,4 +61,6 @@ if (process.env.NODE_ENV === 'production') {
 
 // Port
 
-app.listen(port, () => console.log(`Server is running on ${port}`));
+https.createServer(app).listen(port, () => console.log(`Server is running on ${port}`));
+
+// app.listen();
