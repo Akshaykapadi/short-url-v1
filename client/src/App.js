@@ -59,14 +59,14 @@ async submit() {
         alert('Please ensure this url is correct and includes the http(s) protocol.');
       }else{
         // if(auth0Client.isAuthenticated()){
-          axios.post('http://localhost:5000/api/shorten', {
+          axios.post('/api/shorten', {
           url:this.state.url
         }, {
           headers: { 'Authorization': `Bearer ${auth0Client.getIdToken()}` }
         })
         .then(res => {
                   this.setState({
-                  link: `http://localhost:5000/${res.data.hash}`
+                  link: `/${res.data.hash}`
                 })
               })
               .catch(err => console.log(err));
