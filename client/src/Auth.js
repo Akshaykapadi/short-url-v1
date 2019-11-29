@@ -6,8 +6,8 @@ class Auth {
       // the following three lines MUST be updated
       domain: 'dev-82j78ewk.auth0.com',
       audience: 'https://dev-82j78ewk.auth0.com/userinfo',
-      clientID: 'R39nihdl4ltxuc3Mz0DSvB4Vj0xrgOl5',
-      redirectUri: 'http://localhost:3000/callback',
+      clientID: 'zHkAepJB3eh2v67LKdLlpT5cpJXGbtlB',
+      redirectUri: 'https://shorturl-1.herokuapp.com//callback',
       responseType: 'id_token',
       scope: 'openid profile'
     });
