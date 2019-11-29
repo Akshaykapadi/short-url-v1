@@ -7,7 +7,7 @@ class Auth {
       domain: 'dev-82j78ewk.auth0.com',
       audience: 'https://dev-82j78ewk.auth0.com/userinfo',
       clientID: 'zHkAepJB3eh2v67LKdLlpT5cpJXGbtlB',
-      redirectUri: 'https://shorturl-1.herokuapp.com/callback',
+      redirectUri: 'https://shoturl.herokuapp.com/callback',
       responseType: 'id_token',
       scope: 'openid profile'
     });
