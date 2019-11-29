@@ -38,7 +38,7 @@ router.use((req, res, next) => {
 // @route POST api/shorten
 // @desc POST a url to shorten
 // @access Public
-router.post('/',checkJwt,(req,res)=>{
+router.post('/',(req,res)=>{
     // Did you get the req?
     console.log(req);
     if(req.body.url){
